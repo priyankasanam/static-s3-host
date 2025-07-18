@@ -9,8 +9,9 @@ Phases:
       - echo "Nothing to build; packaging site assets."
   post-build:
     commands:
-      - echo "build completed on'date'"
-
+      - echo "deploying to s3 .."
+      - aws s3 cp . s3://static-website-pipeline-124846/ --recursive
+ 
 artifacts:
   files:
     - '**/*'
