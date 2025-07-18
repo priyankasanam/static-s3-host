@@ -1,0 +1,17 @@
+version: 0.2
+
+Phases:
+  install:
+    commands:
+      - echo "Nodependencies for a plain static site."
+  build:
+    commands:
+      - echo "Nothing to build; packaging site assets."
+  post-build:
+    commands:
+      - echo "build completed on'date'"
+
+artifacts:
+  files:
+    - '**/*'
+  discard-parths: no
